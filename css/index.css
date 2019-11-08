@@ -1,0 +1,460 @@
+body,
+html {
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
+    font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+    color: rgb(83, 83, 83);
+    background: #f2f2f2;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+/* 搜索模块 */
+.search-top {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 44px;
+    max-width: 540px;
+    min-width: 320px;
+    background-color: #f6f6f6;
+
+}
+
+.search {
+    position: relative;
+    flex: 1;
+    /* border: 1px solid #2eaae0; */
+    margin: 6px 10px;
+    border-radius: 15px;
+    background-color: #fff;
+    font-size: 14px;
+    color: #666;
+    line-height: 31px;
+    padding-left: 35px;
+
+}
+
+.search::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    width: 15px;
+    height: 15px;
+    background: url("../images/sprite.png") no-repeat -59px -280px;
+    background-size: 104px auto;
+
+}
+
+.user {
+
+    width: 44px;
+    height: 44px;
+
+    font-size: 12px;
+    text-align: center;
+    color: #2eaae0;
+    margin-right: 5px;
+
+}
+
+.user::before {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+    background: url("../images/sprite.png") no-repeat -59px -195px;
+    background-size: 104px auto;
+    margin: 5px auto 0;
+}
+
+/* 焦点图模块 */
+
+
+.focus img {
+    width: 100%;
+    padding-top: 45px;
+}
+
+/* 局部导航栏*/
+.local-nav {
+    display: flex;
+    height: 64px;
+    background-color: pink;
+    margin: 3px 4px;
+    border-radius: 8px;
+}
+
+.local-nav li {
+    flex: 1;
+    background-color: #fff;
+}
+
+.local-nav a {
+    display: flex;
+    /* 侧轴居中对齐 */
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+}
+
+.local-nav-icon {
+    width: 32px;
+    height: 32px;
+    background: url("../images/localnav_bg.png") no-repeat 0 0;
+    background-size: 32px;
+    margin-top: 8px;
+}
+
+li:nth-child(2) .local-nav-icon {
+    background-position: 0 -32px;
+}
+
+li:nth-child(3) .local-nav-icon {
+    background-position: 0 -64px;
+}
+
+li:nth-child(4) .local-nav-icon {
+    background-position: 0 -96px;
+}
+
+li:nth-child(5) .local-nav-icon {
+    background-position: 0 -128px;
+}
+
+/* 大导航栏 */
+nav {
+    border-radius: 8px;
+    margin: 0 4px 3px;
+    overflow: hidden;
+}
+
+.nav-common {
+    display: flex;
+    height: 88px;
+    background-color: pink;
+}
+
+.nav-common:nth-child(1) {
+    background: -webkit-linear-gradient(left, #fa5a55, #fa994d);
+}
+
+.nav-common:nth-child(2) {
+    margin: 3px 0;
+    background: -webkit-linear-gradient(left, #4B90ED, #53BBED);
+}
+
+.nav-common:nth-child(3) {
+    background: -webkit-linear-gradient(left, #34C2A9, #6BD559);
+}
+
+.nav-items {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.nav-common:nth-child(1) .nav-items:nth-child(1) a {
+    background: url("../images/hotel.png") no-repeat bottom center;
+    background-size: 121px;
+}
+
+.nav-common:nth-child(2) .nav-items:nth-child(1) a {
+    background: url("../images/airport.png") no-repeat bottom center;
+    background-size: 121px;
+}
+
+.nav-common:nth-child(3) .nav-items:nth-child(1) a {
+    background: url("../images/trip.png") no-repeat bottom center;
+    background-size: 121px;
+}
+
+.nav-items:nth-child(-n+2) {
+    border-right: 1px solid #fff
+}
+
+.nav-items a {
+    flex: 1;
+    text-align: center;
+    line-height: 44px;
+    font-size: 14px;
+    color: #fff;
+    text-shadow: 1px 1px rgba(0, 0, 0, .2)
+}
+
+.nav-items a:nth-child(1) {
+    border-bottom: 1px solid #fff;
+}
+
+.nav-items:nth-child(1) a {
+    border-bottom: none;
+}
+
+/* 侧导航栏 */
+.subnav-entry {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    background-color: #fff;
+    margin: 0 4px;
+    padding: 5px 0;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, .2);
+    font-size: 12px;
+}
+
+.subnav-entry li {
+    flex: 20%;
+}
+
+.subnav-entry a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.subnav-entry-icon {
+    width: 28px;
+    height: 28px;
+    background-color: pink;
+    margin-top: 4px;
+    background: url("../images/subnav-bg.png")no-repeat 0 3px;
+    background-size: 24px;
+}
+
+.subnav-entry li:nth-child(2) .subnav-entry-icon {
+    background-position: 0 -26px;
+}
+
+.subnav-entry li:nth-child(3) .subnav-entry-icon {
+    background-position: 0 -55px;
+}
+
+.subnav-entry li:nth-child(4) .subnav-entry-icon {
+    background-position: -2px -276px;
+}
+
+.subnav-entry li:nth-child(5) .subnav-entry-icon {
+    background-position: 0 -85px;
+}
+
+.subnav-entry li:nth-child(6) .subnav-entry-icon {
+    background-position: 0 -140px;
+}
+
+.subnav-entry li:nth-child(7) .subnav-entry-icon {
+    background-position: 0 -170px;
+}
+
+.subnav-entry li:nth-child(8) .subnav-entry-icon {
+    background-position: 0 -112px;
+}
+
+.subnav-entry li:nth-child(9) .subnav-entry-icon {
+    background-position: 0 -197px;
+}
+
+.subnav-entry li:nth-child(10) .subnav-entry-icon {
+    background-position: 2px -247px;
+}
+
+/* 销售模块 */
+.sales-box {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    margin: 4px;
+}
+
+.salse-hd {
+    height: 44px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+.salse-hd h2 {
+    position: relative;
+    text-indent: -999px;
+    overflow: hidden;
+}
+
+.salse-hd h2::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    width: 79px;
+    height: 15px;
+    background-color: pink;
+    background: url("../images/hot.png") no-repeat 0 -20px;
+    background-size: 79px;
+}
+
+.more {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    background: -webkit-linear-gradient(left, #ff506c, #ff6bc6);
+    border-radius: 15px;
+    font-size: 14px;
+    color: #fff;
+    padding: 3px 20px 3px 10px;
+    text-align: center;
+}
+
+.more::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: 7px;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+}
+
+/* bd模块 */
+.row {
+    display: flex;
+}
+
+.row a {
+    flex: 1;
+    border-bottom: 1px solid #eee;
+}
+
+.row a:nth-child(1) {
+    border-right: 1px solid #ccc;
+}
+
+.row a img {
+    width: 100%;
+}
+
+/* 底部个人信息栏 */
+.person {
+    display: flex;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.person .person-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.item {
+    width: 20px;
+    height: 20px;
+    background: url("../images/sprite.png") no-repeat;
+    background-size: 104px;
+}
+
+.item1 {
+    /* width: 17px;
+    height: 16px; */
+    background-position: -60px -152px;
+}
+
+.item2 {
+    background-position: -60px -170px;
+}
+
+.item3 {
+    background-position: -60px -308px;
+}
+
+/* 版权信息模块 */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center */
+    color: #333;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+footer div {
+    display: flex;
+    flex: 1;
+    text-align: center;
+}
+
+.content a {
+    flex: 1;
+    color: #333
+}
+
+.content a:nth-child(1) {
+    text-align: right;
+    position: relative;
+}
+
+.content a:nth-child(1)::after {
+    content: "|";
+    position: absolute;
+    top: 0;
+    left: 200px;
+    color: #333;
+}
+
+.content a:nth-child(3) {
+    text-align: left;
+    position: relative;
+}
+
+.content a:nth-child(3)::after {
+    content: "|";
+    position: absolute;
+    top: 0;
+    right: 210px;
+    color: #333;
+}
+
+.copy {
+    margin-top: 5px;
+}
+
+.copy span {
+    flex: 1;
+}
+
+.copy span:nth-child(1) {
+    text-align: right;
+    margin-right: 5px;
+}
+
+.copy span:nth-child(2) {
+    text-align: left;
+}
